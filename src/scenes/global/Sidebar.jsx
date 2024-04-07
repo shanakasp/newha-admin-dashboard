@@ -1,17 +1,17 @@
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
 import { Menu, MenuItem, ProSidebar } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
-const darkPurple = "#6A0DAD"; // Dark purple color
-const lightPurple = "#C97FD3"; // Light purple color
+const darkPurple = "#590595"; // Dark purple color
+const lightPurple = "#E279EF"; // Light purple color
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -41,6 +41,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
             top: 0,
             left: 0,
             width: "80%",
+            borderRadius: "2%",
             height: "100%",
             backgroundColor: "rgba(178, 190, 181, 0.4);",
             zIndex: -1,
@@ -155,7 +156,7 @@ const Sidebar = () => {
             <Item
               title="Settings"
               to="/settings"
-              icon={<CalendarTodayOutlinedIcon />}
+              icon={<SettingsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />

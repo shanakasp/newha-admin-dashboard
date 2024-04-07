@@ -1,5 +1,5 @@
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import { Box, IconButton, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 
@@ -9,8 +9,24 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box display="flex" justifyContent={"end"} p={2}>
-      <Box display="flex" marginRight={"20px"}>
+    <Box
+      display="flex"
+      justifyContent="space-between"
+      p={2}
+      // backgroundColor={colors.primary[400]}
+    >
+      <Box display="flex" borderRadius="3px">
+        <Typography
+          variant="h2"
+          color={colors.grey[500]}
+          fontWeight="bold"
+          sx={{ m: "10px " }}
+        >
+          Project Management System
+        </Typography>
+      </Box>
+
+      <Box display="flex" sx={{ marginRight: "20px" }}>
         <IconButton>
           <NotificationsOutlinedIcon />
         </IconButton>
@@ -20,9 +36,9 @@ const Topbar = () => {
             width="50px"
             height="50px"
             src={`../../assets/user.png`}
-            style={{ cursor: "pointer", borderRadius: "50%" }}
+            style={{ cursor: "pointer", borderRadius: "20%" }}
           />
-        </Box>
+        </Box>{" "}
       </Box>
     </Box>
   );

@@ -10,8 +10,8 @@ import { Menu, MenuItem, ProSidebar } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
-const darkPurple = "#590595"; // Dark purple color
-const lightPurple = "#E279EF"; // Light purple color
+const darkPurple = "#2c2040"; // Dark purple color
+const lightPurple = "#947cb4"; // Light purple color
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
